@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="dotNet5780_03_2088.HostingUnitUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:dotNet5780_03_2088"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Height="200" Width="800" MinWidth="3" FontFamily="Comic Sans MS" FontSize="16">
+    <Grid x:Name="UserControlGird">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbUnitName" HorizontalAlignment="Left" Height="34" Margin="10,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Text="{Binding Path=UnitName}"/>
+        <Label Content="מספר חדרים" HorizontalAlignment="Left" Margin="159,89,0,0" VerticalAlignment="Top" Width="98" Height="38"/>
+        <TextBox Name="tbRooms" HorizontalAlignment="Left" Margin="10,93,0,0" TextWrapping="Wrap" Text="{Binding Path=Rooms}" Width="120" Height="27" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+        <CheckBox x:Name="IsSwimingPool" Content="בריכה" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=IsSwimmimgPool}"/>
+        <Viewbox x:Name="vbCalander" Grid.Column="1" HorizontalAlignment="Left" Height="138" Margin="9.8,10,0,0" VerticalAlignment="Top" Width="247" Stretch="Fill"/>
+        <Button x:Name="btOrder" Content="הזמן" Grid.Column="1" HorizontalAlignment="Left" Margin="94.8,156,0,18" Width="75" Click="btOrder_Click"/>
+    </Grid>
+</UserControl>
